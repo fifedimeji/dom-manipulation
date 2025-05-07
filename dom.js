@@ -1,6 +1,6 @@
 // EXAMININE THE DOCUMENT //
 
-// console.dir(document)
+console.dir(document)
 console.log(document.domain)
 console.log(document.URL)
 console.log(document.title)
@@ -46,15 +46,53 @@ console.log(document.images)
 
 // GETELEMENTSBYTAGNAME // 
 
-var li = document.getElementsByTagName("li")
-console.log(li)
-console.log(li[1])
-li[1].textContent = "Hello 2"
-li[1].style.fontWeight = 'bold'
-li[1].style.backgroundColor = 'aquamarine'
+// var li = document.getElementsByTagName("li")
+// console.log(li)
+// console.log(li[1])
+// li[1].textContent = "Hello 2"
+// li[1].style.fontWeight = 'bold'
+// li[1].style.backgroundColor = 'aquamarine'
 
 // li.style.backgroundColor = 'f4f4f4' // won't work
 
-for(var i = 0; i < li.length; i++){
-    li[i].style.backgroundColor = '#f4f4f4'
+// for(var i = 0; i < li.length; i++){
+//     li[i].style.backgroundColor = '#f4f4f4'
+// }
+
+
+// QUERYSELECTOR //
+
+// let header = document.querySelector('#main-header')
+// header.style.borderBottom = 'solid 4px aquamarine'
+
+// let input = document.querySelector('input')
+// input.value = "Hello World!"
+
+// let submit = document.querySelector('input[type="submit"]')
+// submit.value = "SEND"
+
+// let item = document.querySelector('.list-group-item')
+// item.style.color = "coral"
+
+// let lastItem = document.querySelector('.list-group-item:last-child')
+// lastItem.style.color = "coral"
+
+// let secondItem = document.querySelector('.list-group-item:nth-child(2)')
+// secondItem.style.color = "coral"
+
+// let thirdItem = document.querySelector('.list-group-item:nth-child(3)')
+// thirdItem.style.color = "coral"
+
+// QUERYSELECTORALL //
+
+let titles = document.querySelectorAll('.title')
+console.log(titles)
+titles[0].textContent = "Hello"
+
+let odd = document.querySelectorAll('li:nth-child(odd)')
+let even = document.querySelectorAll('li:nth-child(even)')
+for(let i = 0; i < odd.length; i++){
+    odd[i].style.backgroundColor = '#f4f4f4'
+    even[i].style.backgroundColor = '#ccc'
 }
+
